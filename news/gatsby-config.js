@@ -3,12 +3,12 @@ module.exports = {
     title: `News-4-All Co.`,
     description: `ITDEV-164 Project 1: News-4 All Co.`,
     author: `Karen Santiago`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
     contact: {
       name: `Karen Santiago`,
       company: `News-4 All Co.`,
       address: ` PO Box 107`
     },
+    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
    },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -16,9 +16,9 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: `pcvjpvjnnyq1`,
-        accessToken: `PDlLS7KFRL78UzIzcnipAxOYrsAvO_9IeJo3L5rAK2U`
-      }
+        spaceId: `1irlp5bv76ke`,
+        accessToken: `6aMyr0T6IkTR0GKptOc4TQ9ZR2vNNtXkBqYBthGjgkw`
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
