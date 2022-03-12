@@ -9,10 +9,17 @@ module.exports = {
       address: ` PO Box 107`
     },
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
-  },
+   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `1irlp5bv76ke`,
+        accessToken: `6aMyr0T6IkTR0GKptOc4TQ9ZR2vNNtXkBqYBthGjgkw`
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
