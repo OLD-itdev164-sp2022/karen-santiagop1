@@ -19,10 +19,10 @@ const H1 = styled.h1`
 `
 
 const StyledLink = styled(Link)`
-  color: white;
+  color: black;
   text-decoration: none;
   &:hover {
-    color: purple;
+    color: silver;
   }
 `
 
