@@ -5,13 +5,13 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import * as React from "react"
+import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from 'styled-components'
 
 import Header from "./header"
-import "./layout.css"
+import GlobalStyle from "./GlobalStyle"
 
 const Content = styled.div`
   margin: 0 auto;
@@ -33,14 +33,11 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title || `Title`} />
+    <GlobalStyle />
+      <Header siteTitle={data.site.siteMetadata.title} />
       <Content>
         <main>{children}</main>
-        <footer
-          style ={{
-          marginTop: `2rem`,
-        }}
-      >
+        <footer>
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.com">Gatsby</a>
