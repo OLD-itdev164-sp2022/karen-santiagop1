@@ -1,3 +1,7 @@
+require ('dotenv').config({
+  path:`.env.${process.env.NODE_ENV}`
+});
+
 module.exports = {
   siteMetadata: {
     title: `News-4-All Co.`,
@@ -10,15 +14,15 @@ module.exports = {
     },
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
    },
-  plugins: [
+   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: `1irlp5bv76ke`,
-        accessToken: `6aMyr0T6IkTR0GKptOc4TQ9ZR2vNNtXkBqYBthGjgkw`
-      },
+        spaceId: `${process.env.SPACE_ID}`,
+        accessToken: `${process.env.ACCESS_TOKEN}`,
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -27,7 +31,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
+    `gatsby-transformer-remark`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
