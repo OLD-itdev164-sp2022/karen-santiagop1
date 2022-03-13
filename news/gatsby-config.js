@@ -1,5 +1,5 @@
-require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`
+require ('dotenv').config({
+  path:`.env.${process.env.NODE_ENV}`
 });
 
 module.exports = {
@@ -14,15 +14,15 @@ module.exports = {
     },
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
    },
-  plugins: [
+   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `${process.env.SPACE_ID}`,
-        accessToken: `${process.env.ACCESS_TOKEN}`
-      },
+        accessToken: `${process.env.ACCESS_TOKEN}`,
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -32,7 +32,7 @@ module.exports = {
       },
     },
     `gatsby-transformer-remark`,
-    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
