@@ -9,7 +9,7 @@ module.exports = {
     author: `Karen Santiago`,
     contact: {
       name: `Karen Santiago`,
-      company: `News-4 All Co.`,
+      company: `World Wide News Post `,
       address: ` PO Box 107`
     },
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
